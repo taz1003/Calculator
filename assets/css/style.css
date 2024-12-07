@@ -1,3 +1,4 @@
+/* reset initial style */
 * {
     margin: 0;
     padding: 0;
@@ -6,5 +7,61 @@
 
 body {
     font-family: 'Exo 2', sans-serif;
+    background-color: #262626;
+    color: #F2F2F2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+header {
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header img {
+    max-width: 380px;
+}
+
+/* calculator part */
+.calculator {
+    color: #8C3908;
+    border-radius: 15px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    width: 400px;
+}
+
+.display {
+    background-color: #F25C05;
+    color: #F2F2F2;
+    font-size: 3rem;
+    text-align: right;
+    padding: 0.7rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+button {
+    background-color: #F24405;
+    color: #F2F2F2;
+    font-size: 1.7rem;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+}
