@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Exo 2', sans-serif;
-    background-color: #262626;
+    background-color: #8C3908;
     color: #F2F2F2;
     height: 100vh;
     display: flex;
@@ -30,6 +30,7 @@ header img {
 
 /* calculator part */
 .calculator {
+    background-color: #262626;
     color: #8C3908;
     border-radius: 15px;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
@@ -64,4 +65,18 @@ button {
     border-radius: 8px;
     padding: 1rem;
     cursor: pointer;
+    transition: background-color 0.5s;
 }
+
+button:hover {
+    background-color: #8C3908;
+}
+
+.button-operator {
+    background-color: #8C3908;
+}
+
+.button-operator:hover {
+    background-color: #F24405;
+}
+
