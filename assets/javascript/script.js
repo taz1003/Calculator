@@ -22,11 +22,27 @@ for (let button of numberButtons) {
 
 // Iterating through all the operator buttons
 for (let button of operatorButtons) {
-    button.addEventListener("click" => (
+    button.addEventListener("click", () => {
         let value = button.textContent;
         setOperator()
-    ));
+    });
 };
+
+// Add event listener for equals button
+equalsButton.addEventListener("click", () => {
+    mainCalculate();
+});
+
+// Add event listener for clear button
+clearButton.addEventListener("click", () => {
+    clearCalculator();
+});
+
+// Add event listener for decimal button
+decimalButton.addEventListener("click", () => {
+    appendNumber();
+});
+
 
 /**
  * Calculates 
