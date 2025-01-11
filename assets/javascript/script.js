@@ -81,7 +81,26 @@ function appendNumber(value) {
 /**
  * 
  */
-function setOperator()
+function setOperator(op) {
+    // Stops if under any error state
+    if(error)
+        return;
+
+    // Allow operator change without entering a new number
+    if (currentInput = "" && num1 !== null)
+        operator = op;
+        updateDisplay(`${num1} ${operator}`)
+
+    // Initializes the current input as the number which is then saved as num1
+    // for the calculation
+    if (num1 === null) {
+        num1 = parseFloat(currentInput);
+    };
+
+    operator = op;
+    currentInput = ""; // Resets for new number input
+    updateDisplay(`${num1} ${operator}`); // Show the operator in the display
+}
 
 
 /**
