@@ -16,7 +16,7 @@ let operator = null; // operators
 for (let button of numberButtons) {
     button.addEventListener("click", () => {
         let value = button.textContent;
-        appendNumber()
+        appendNumber(value)
     });
 };
 
@@ -40,7 +40,7 @@ clearButton.addEventListener("click", () => {
 
 // Add event listener for decimal button
 decimalButton.addEventListener("click", () => {
-    appendNumber();
+    appendNumber(".");
 });
 
 
@@ -64,9 +64,19 @@ function mainCalculate() {
 
 
 /**
- * 
+ * Appends numbers or decimal point
  */
-function appendNumber()
+function appendNumber(value) {
+    // Stops if under any error state
+    if (error)
+        return;
+    // Stops multiple decimal point inputs
+    if (value === "." && currentInput.includes("."))
+        return;
+    // Appends value for each input
+    currentInput += value;
+    updateDisplay(currentInput);
+}
 
 /**
  * 
@@ -77,7 +87,9 @@ function setOperator()
 /**
  * 
  */
-function updateDisplay()
+function updateDisplay(value) {
+    display.textContent = value;
+}
 
 /**
  * 
