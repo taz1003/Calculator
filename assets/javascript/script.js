@@ -1,13 +1,20 @@
+// DOM elements
 const display = document.getElementById("calc-display"); // Select display
-const buttons = document.querySelectorAll("buttons-id buttons"); // selects all buttons
+const numberButtons = document.querySelectorAll(".numbers");
+const equalsButton = document.querySelector(".button-equal");
+const operatorButtons = document.querySelectorAll(".button-operator");
+const decimalButton = document.getElementById("decimal");
+const clearButton = document.getElementById("button-clear");
 
 let error = false
 
-for (let button of buttons) {
+
+
+for (let button of numberButtons) {
     button.addEventListener("click", () => {
         let value = button.textContent;
-    })
-}
+    });
+};
 
 function mainCalculate() {
 
@@ -26,7 +33,9 @@ function mainCalculate() {
 }
 
 
-function updateDisplay()
+function updateDisplay() {
+    
+}
 
 
 function clearCalculator()
